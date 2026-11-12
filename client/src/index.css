@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #172033;
+  --color-ink-soft: #4a5670;
+  --color-teal: #0e9f8e;
+  --color-teal-dark: #0a7a6d;
+  --color-sun: #ffb703;
+  --color-mist: #eef3f6;
+  --color-line: #d8e0e7;
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-mist);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sun);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* The one memorable moment: the two hero cards drift into a swap on load */
+@keyframes swap-left { from { transform: translateX(28px) rotate(0); } to { transform: translateX(0) rotate(-4deg); } }
+@keyframes swap-right { from { transform: translateX(-28px) rotate(0); } to { transform: translateX(0) rotate(3deg); } }
+.hero-card-a { animation: swap-left 0.9s ease-out both; }
+.hero-card-b { animation: swap-right 0.9s ease-out both; }
