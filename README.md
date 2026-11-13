@@ -79,10 +79,8 @@ npm run dev               # runs on http://localhost:5173
 `GET /api/users/matches` finds users who **offer** a skill that you **want**. If they also **want** something you
 **offer**, it is a *mutual match* and ranks first.
 
-## Deployment (optional bonus)
+## Deployment 
 - Backend: Render/Railway. Add the same variables as `.env`; set `CLIENT_URL` to your frontend URL.
 - Frontend: Vercel/Netlify. Set `VITE_API_URL=https://your-api.onrender.com/api`.
 
-## Demo flow for your viva
-1. Register two accounts (use two browsers). 2. Add skills that match each other. 3. Open **Matches**, propose a swap.
-4. Accept in the other account. 5. Mark completed and rate. 6. Show the protected route redirect when logged out.
+
